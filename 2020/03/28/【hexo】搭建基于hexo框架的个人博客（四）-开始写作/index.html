@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage4/%E5%AF%B9%E6%AF%94.png">
 <meta property="article:published_time" content="2020-03-28T03:42:36.000Z">
-<meta property="article:modified_time" content="2020-03-28T10:55:07.417Z">
+<meta property="article:modified_time" content="2020-03-28T11:35:45.751Z">
 <meta property="article:author" content="MIKE_GUO">
 <meta property="article:tag" content="hexo 个人博客">
 <meta name="twitter:card" content="summary">
@@ -201,7 +201,7 @@
 <h2 id="Markdown文本标记语言"><a href="#Markdown文本标记语言" class="headerlink" title="Markdown文本标记语言"></a>Markdown文本标记语言</h2><p>Hexo博客网站当中的文章是用Markdown来进行文字的处理。Markdown是一种轻量级标记语言，通过简单的标记语法使普通文本内容具有一定的格式，其文件后缀名为.md，可以使用vscode、Typora（推荐）等文本编辑器打开。</p>
 <p>可以类比，我们最常用的文字处理软件就是Microsoft Word，它就像vscode、Typora这样的编辑器；生成的文件后缀则为.doc/.docx，这和.md的道理是一样的。区别就在于Markdown需要在文字间插入一些特定的符号，使其拥有特定的效果。</p>
 <p>我们可以用vscode打开内置的Hello World博客，并和浏览器中显示出来的效果进行对比来体会一下：</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage4/%E5%AF%B9%E6%AF%94.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage4/%E5%AF%B9%E6%AF%94.png" style="zoom:80%;" />
 
 <p>在编辑器方面，vscode就是一个单纯的文本编辑器，处理文字的字符就需要一个个地敲，而且所见非所得，因此推荐Typora这个专门为markdown打造的编辑器，用过之后直呼真香！</p>
 <h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><p>关于Markdown的语法，百度上有非常多的介绍，都可以进行参考。<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">Markdown 教程 | 菜鸟教程</a></p>
@@ -228,34 +228,30 @@
 <h3 id="7-图片"><a href="#7-图片" class="headerlink" title="7.图片"></a>7.图片</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">名称</span>](<span class="link">链接</span>)</span><br></pre></td></tr></table></figure>
 
 <p>如果这张图片存放在图床上，只需要将图床上的链接复制粘贴到圆括号里即可！</p>
-<h3 id="8-代码块"><a href="#8-代码块" class="headerlink" title="8.代码块"></a>8.代码块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">```</span>language </span><br><span class="line">hello world!</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-<pre><code>
-使用三个反引号可以（**\`\`\`**）嵌入代码块，支持自动高亮的语言十分广泛。
+<h3 id="8-代码块"><a href="#8-代码块" class="headerlink" title="8.代码块"></a>8.代码块</h3><p>```java</p>
+<p>System.out.println(“hello world”);</p>
+<p>```</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure>
 
-如果是一个函数或一行代码可以用反引号（**\`**）把它包起来嵌入行内。例如\`printf()\` --&gt; `printf()`
+<p>使用三个反引号可以（<strong>```</strong>）嵌入代码块，支持自动高亮的语言十分广泛。</p>
+<p>如果是一个函数或一行代码可以用反引号（<strong>`</strong>）把它包起来嵌入行内。例如`printf()` –&gt; <code>printf()</code></p>
+<h3 id="9-转义"><a href="#9-转义" class="headerlink" title="9.转义"></a>9.转义</h3><p>我们知道，在Markdown当中一些符号是有特定的排版作用的，就像星号 * 井号 # 波浪线 ~ 反引号 ` 等等。</p>
+<p>如果我们需要输入的内容恰好是有特定意义的字符，例如需要在行首输入##这两个井号而不是写一个二级标题，这时就需要将反斜杠 \ 放在井号之前对其进行转义，防止编辑器将其识别为二级标题。</p>
+<h2 id="雕虫小技"><a href="#雕虫小技" class="headerlink" title="雕虫小技"></a>雕虫小技</h2><p>在调试网站过程中我发现一个问题，每次修改博客里面的文件或是保存自己的文章，甚至是我改动一下文件名，电脑都会提示要求输入密码。思考过后我意识到问题所在——权限不足。</p>
+<p>我在使用<code>$ls -l</code>列出blog目录下面文件的详细信息时看到权限一项中显示的全部都为rwxr–r–，这表明文件对于所有者(root用户)可读可写可执行，对于同组用户(我自己)和其他用户都是只读的，因此我们直接在访达或者文本编辑器当中是无法进行修改的，每一次修改都需要提供密码获得root权限才能进行。为什么文件的所有者是root用户呢，那是因为我们在命令行进行操作前都先<code>$sudo su</code>拿到root权限之后才操作，文件的所有者自然就是root用户了。</p>
+<p>我们可以通过修改权限的方法让所有用户都能够获得写和执行权限，这样就无须每次改动都输入密码了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> -R 777 blog</span><br></pre></td></tr></table></figure>
 
-### 9.转义
+<p>-R 表示一次性修改blog文件夹下面所有的文件的权限（递归修改）</p>
+<p>777 表示将文件的权限修改为rwxrwxrwx</p>
+<p>以后在新建文章的时候可以这么做：执行完新建文章的命令后，用<code>cd</code>命令切换到博客markdown文件所在的地方，将md文件和存放资源的文件夹（如果有的话）的权限修改一下。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> 777 [filename]</span><br></pre></td></tr></table></figure>
 
-我们知道，在Markdown当中一些符号是有特定的排版作用的，就像星号 * 井号 # 波浪线 ~ 反引号 \` 等等。
+<p>关于命令行和修改权限的详细知识就不在这里展开了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Markdown标记语言的功能是十分强大的，这里所列举的只是凤毛麟角。像我一样的初学者先掌握一些基本的方法就可以开始写作了，遇到需要使用一些高级功能时（插入数学公式、表格、脚注······）可以直接百度，现学现用，毕竟它的学习成本也并不高~另外，网络上也有一些出版的书籍专门系统的介绍这门文本标注语言，有兴趣的小伙伴可以去浏览一下哦。</p>
+<p>四篇关于搭建博客的实战记录就已经完结了。在未来，我考虑购置一个云服务器并将网站部署到云服务器中，到那时再继续写写关于博客网站的实战文章吧！</p>
+<p>希望看到这几篇文章的你也能在创作博客的过程中获得自己的快乐！Farewell！</p>
 
-如果我们需要输入的内容恰好是有特定意义的字符，例如需要在行首输入##这两个井号而不是写一个二级标题，这时就需要将反斜杠 \ 放在井号之前对其进行转义，防止编辑器将其识别为二级标题。
-
-## 总结
-
-Markdown标记语言的功能是十分强大的，这里所列举的只是凤毛麟角。像我一样的初学者先掌握一些基本的方法就可以开始写作了，遇到需要使用一些高级功能时（插入数学公式、表格、脚注······）可以直接百度，现学现用，毕竟它的学习成本也并不高~另外，网络上也有一些出版的书籍专门系统的介绍这门文本标注语言，有兴趣的小伙伴可以去浏览一下哦。
-
-四篇关于搭建博客的实战记录就已经完结了。在未来，我考虑购置一个云服务器并将网站部署到云服务器中，到那时再继续写写关于博客网站的实战文章吧！
-
-希望看到这几篇文章的你也能在创作博客的过程中获得自己的快乐！Farewell！
-
-
-
-
-
-
-
-
-</code></pre>
       
 
       
@@ -368,6 +364,15 @@ Markdown标记语言的功能是十分强大的，这里所列举的只是凤毛
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/04/06/%E3%80%90Java%E3%80%91String-SringBuffer-StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          【Java】String,SringBuffer,StringBuilder的区别
+        
+      </div>
+    </a>
   
   
     <a href="/2020/03/22/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89-%E4%B8%AA%E6%80%A7%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
@@ -522,6 +527,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo 个人博客</a>

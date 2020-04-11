@@ -202,14 +202,14 @@
 
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><h3 id="0-如何找主题"><a href="#0-如何找主题" class="headerlink" title="0.如何找主题"></a>0.如何找主题</h3><p>hexo官网上有主题商店，GitHub上面也有不少的人气主题。我使用的是名为 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener"> <em>hexo-theme-yillia</em></a> 的主题，在GitHub上面获得了非常多的star，整个界面也十分美观清爽。</p>
 <p>其实若我们直接在GitHub上搜索hexo，第三个便是我要介绍的主题了。</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E6%89%BE%E4%B8%BB%E9%A2%98.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E6%89%BE%E4%B8%BB%E9%A2%98.png" style="zoom:80%;" />
 
 <h3 id="1-下载主题"><a href="#1-下载主题" class="headerlink" title="1.下载主题"></a>1.下载主题</h3><p>找到主题后，我们需要将主题下载到本地。同样的，我们需要在终端里进行操作。需要注意要先获得管理员操作权限同时确保在自己的博客文件夹中进行操作。</p>
 <p>在终端中输入以下代码就可以将主题文件下载到blog文件夹下专门负责存放主题的theme文件夹，下载的过程我们也可以称之为“克隆（clone）”</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 
 <p>下载的过程如图所示，克隆过程可能会非常慢，我们只需要耐心等待即可：</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E4%B8%8B%E4%B8%BB%E9%A2%98.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E4%B8%8B%E4%B8%BB%E9%A2%98.png" style="zoom:80%;" />
 
 <p>克隆过程可能会非常慢，我们只需要耐心等待即可。下载好后我们也可以在访达中看到下载好的主题文件。</p>
 <h3 id="2-配置主题"><a href="#2-配置主题" class="headerlink" title="2.配置主题"></a>2.配置主题</h3><p>我们通过修改博客<em>_config.yml</em> 中的参数，将当前主题切换为yilia。</p>
@@ -218,7 +218,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$vim</span> _config.yml</span><br></pre></td></tr></table></figure>
 
 <p>打开配置文件后，找到# Extensions下的theme配置项，将原来的landscape主题改为yilia即可。至于vi编辑器的使用方法就不在这里赘述了。</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98.png" style="zoom:80%;" />
 
 
 
@@ -227,7 +227,7 @@
 <h3 id="3-清理缓存，重新生成博客文件"><a href="#3-清理缓存，重新生成博客文件" class="headerlink" title="3.清理缓存，重新生成博客文件"></a>3.清理缓存，重新生成博客文件</h3><p>为了确保更换的主题生效，我们可以先清除缓存，重新生成博客文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> clean</span><br><span class="line"><span class="variable">$hexo</span> g</span><br></pre></td></tr></table></figure>
 
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E6%B8%85%E7%BC%93%E5%AD%98.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E6%B8%85%E7%BC%93%E5%AD%98.png" style="zoom:80%;" />
 
 
 
@@ -236,7 +236,7 @@
 <h2 id="进一步配置"><a href="#进一步配置" class="headerlink" title="进一步配置"></a>进一步配置</h2><p>关于hexo博客网站的更详细配置，当然就少不了对<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方技术文档</a>的查阅了！事实上，无论学习什么互联网技术，官网上的技术文档永远是我们需要查看翻阅的，它就像一本说明书，告诉我们关于这项技术的每一个细节。</p>
 <h3 id="0-详细配置博客网站"><a href="#0-详细配置博客网站" class="headerlink" title="0.详细配置博客网站"></a>0.详细配置博客网站</h3><p>进入技术文档页面后，我们可以看到关于hexo详细的介绍说明。在右边的菜单栏中点击“配置”，我们就可以看到对博客配置文件<em>_config.yml</em>中每个配置项的说明。</p>
 <p>同样需要注意的是，这儿所说的<em>_config.yml</em>是博客根目录下的配置文件，而不是博客主题的配置文件。</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E6%96%87%E6%A1%A3.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E6%96%87%E6%A1%A3.png" style="zoom:80%;" />
 
 <p>通常我们需要进行设置的几项：</p>
 <ol>
@@ -253,17 +253,17 @@
 <h3 id="1-详细配置主题"><a href="#1-详细配置主题" class="headerlink" title="1.详细配置主题"></a>1.详细配置主题</h3><p>对博客网站配置完成后，我们就需要对主题进行配置。要对主题进行配置，我们就需要进入到主题的文件夹当中的<em>_config.yml</em>文件中进行配置了。</p>
 <p>在这儿的<em>_config.yml</em>就是主题的配置文件了，而不是博客网站的配置文件，这一点万万不可混淆。</p>
 <p>主题当中各个配置项的说明一般都会以注释的形式写在配置文件中，我们使用终端中的vi编辑器或vscode打开配置文件即可进行配置。若是遇到了问题，我们可以进入这个主题在github上的页面，点进issue搜索一下，毕竟自己遇到的问题，大概率别人也遇到过。</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/issue.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/issue.png" style="zoom:80%;" />
 
 <h3 id="2-关于网站中的图片问题"><a href="#2-关于网站中的图片问题" class="headerlink" title="2.关于网站中的图片问题"></a>2.关于网站中的图片问题</h3><p>在设置主题时，我们可以设置头像以及文章结尾的打赏<del>（暗示）</del> 。头像图片、打赏的二维码、侧边栏QQ微信的二维码名片，这些都是通过图片来展示的。我在设置这些项目的时候遇到了不少问题：这些图片该放在文件夹中的哪个位置呢，我应该如何在主题配置文件中应用这些图片呢，用相对路径还是绝对路径呢，直接放在文件夹里的图片加载老半天还出不来……这些问题一度给我造成了不小的困扰，直到我发现了一种几乎零成本但是超级好用解决方案——图床。</p>
 <p>图床一般指的是储存图片的服务器。我们可以这样理解，将图片上传到图床上就像将图片上传到百度云盘里，不同的是，图床会为每一张图片生成一个链接，让你能够直接通过这个链接访问到这张图片。既然这样，我们在需要使用图片时将图片上传到图床上，直接在需要的地方使用生成的链接即可。这样一来我们就完全不用担心图片该放哪个目录下、应该用相对路径还是绝对路径等各种恼人的问题了，链接一丢，完事儿！</p>
 <p>事实上，很多平台都会提供图床服务，比如阿里云，腾讯云等等。在这些平台中，图床有一个专业的名称——对象存储，我们需要使用的正是对象存储服务。而我使用的是腾讯云对象存储服务。</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E8%85%BE%E8%AE%AF%E4%BA%91.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E8%85%BE%E8%AE%AF%E4%BA%91.png" style="zoom:80%;" />
 
-<p><img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E9%98%BF%E9%87%8C%E4%BA%91.png" alt></p>
+<p><img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E9%98%BF%E9%87%8C%E4%BA%91.png" alt=""></p>
 <p>当然，想白嫖这样的服务是不存在的💩，不过幸好的是对象储存的费用十分低廉（毕竟因为你的小博客也不会产生一天几万十几万的访问量）。按照我的使用频率，每天仅需低至1分钱🤣。费用基本上都是来自于他人访问网站时从服务器上加载图片所产生的流量（如果某天没人访问你的网站，这一天自然就不会产生费用了），而在服务器中储存这些图片的费用则是在相当长的一段时间内免费的。</p>
 <p>至于如何使用图床，平台上面都有详细的解释和介绍。大概就是开通服务–&gt;创建储存桶–&gt;上传图片–&gt;复制图片地址–&gt;在需要的地方填写图片地址即可。</p>
-<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E5%9B%BE%E5%BA%8A%E9%93%BE%E6%8E%A5.png" style="zoom:80%;">
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage3/%E5%9B%BE%E5%BA%8A%E9%93%BE%E6%8E%A5.png" style="zoom:80%;" />
 
 <p>上图当中红色框内的链接就是将两个打赏码上传到图床中，利用链接进行访问。</p>
 <h3 id="3-在配置中遇到的其他问题"><a href="#3-在配置中遇到的其他问题" class="headerlink" title="3.在配置中遇到的其他问题"></a>3.在配置中遇到的其他问题</h3><ol>
@@ -549,6 +549,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo 个人博客</a>
