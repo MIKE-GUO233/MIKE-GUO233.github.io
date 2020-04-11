@@ -181,28 +181,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近在做Java课设，处理字符串的时候涉及到使用String,SringBuffer,StringBuilder这三个类之中的方法。心生疑惑便查了查，总算是弄懂了。</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>字符串在Java当中作为对象存在，String,SringBuffer,StringBuilder这三个类则含有许多处理字符串的基本方法。</p>
-<p>字符串的本质其实是由字符组成的字符序列。简单地说，String类所创建的字符序列是不可变的，一旦创建便不能修改；而SringBuffer和StringBuilder两个类所创建的字符序列是可变的，可以在原有序列的基础上进行修改而无需创建新的对象。SringBuffer的方法线程安全、执行效率低；StringBuilder的方法线程不安全、执行效率高。String类继承自Object类，SringBuffer和StringBuilder则继承自AbstractStringBuilder类。</p>
-<img src="https://img-blog.csdn.net/20180411092328691?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTEwMTE3Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" style="zoom:80%;" />
-
-<h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><p>在Java当中像”abc”这样的所有字符串的字面值都是String类的一个实例。String创建的字符串是固定的，一旦被创建后就不能再被更改了。正因为它是不可变的，所以字面值可以直接赋给一个String类的对象引用变量。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str &#x3D; &quot;abc&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char data[] &#x3D; &#123;&#39;a&#39;, &#39;b&#39;, &#39;c&#39;&#125;;</span><br><span class="line">String str &#x3D; new String(data);</span><br></pre></td></tr></table></figure>
-
-<p>是等价的。</p>
-<p>String类包含了检查每一个在字符序列中的字符、比较字符串、搜寻字符串、截取字符串、将原来字符串中的字符转换为大写或小写并存进一个新的字符串。字符的编码规则是由Character类指定的标准Unicode版本。Java中使用运算符（<code>+</code>）进行字符串的拼接。一般情况下，向String类的构造器或者方法当中传入一个空值（<code>null</code>）会抛出空指针异常（<code>NullPointerException</code> ）。</p>
-<p>String类使用UTF-16格式来表示字符串，使用代理对（<em>surrogate pairs</em>）来表示扩展字符。其中每个索引值对应一个代码单元（code unit），所以一个扩展字符需要占用两个位置。</p>
-<p>String类还提供了一些方法用来处理Unicode代码点（code point）和Unicode代码单元。在一般情况下，String类中比较字符串的方法不考虑区域问题，至于细粒度以及区域敏感的字符串比较方法则由Collator类来提供。</p>
-<h2 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h2><p>StringBuilder类的对象是可变的字符序列，提供与StringBuffer类兼容的API，但是不保证线程同步。在只有单个线程访问字符缓冲区时，通常使用StringBuilder类作为StringBuffer类的替换。我们尽可能地应该优先使用StringBuilder类，因为在大多数情况下它的效率更高，速度更快。</p>
-<p>在StringBuilder类当中的主要操作是使用增加（append）和插入（insert）方法，这两个方法被重载（overloaded）了很多次来接收任何类型的数据。每一个方法都将接收到的数据转换为字符串，然后再将字符串中的字符拼接或插入到StringBuilder的对象当中。每个string builder都有它的容量。只要其中包含的字符序列的长度不超过指定的容量，那么就不必分配新的内部缓存来储存。</p>
-<p>StringBuilder类的实例是线程不安全的，如果需要线程同步操作的话需要使用SringBuffer类。一般情况下，向其构造器或者方法当中传入一个空值会抛出空指针异常。</p>
-<h2 id="StringBuffer类"><a href="#StringBuffer类" class="headerlink" title="StringBuffer类"></a>StringBuffer类</h2><p>这是一个线程安全的可变字符序列。StringBuffer类的对象和字符串十分类似，只是它是可变的。在任何时候它都包含一些特定的字符序列，序列的长度和内容可以通过调用特定的方法进行修改。</p>
-<p>在多线程当中使用StringBuffer时安全的。必要时类当中的方法都是线程同步的，以便于在实例当中按照特定顺序来执行操作，这个顺序和每个线程调用方法的顺序是一致的。在StringBuilder类当中的主要操作和StringBuilder类相似，在此就不赘述了。</p>
-<p>Whenever an operation occurs involving a source sequence (such as appending or inserting from a source sequence), this class synchronizes only on the string buffer performing the operation, not on the source. Note that while <code>StringBuffer</code> is designed to be safe to use concurrently from multiple threads, if the constructor or the <code>append</code> or <code>insert</code> operation is passed a source sequence that is shared across threads, the calling code must ensure that the operation has a consistent and unchanging view of the source sequence for the duration of the operation. This could be satisfied by the caller holding a lock during the operation’s call, by using an immutable source sequence, or by not sharing the source sequence across threads.</p>
-<p>如果执行一个需要源序列的操作，StringBuffer类只在字符串缓冲区而不是在源中进行同步。需要注意到虽然StringBuffer类被设计为在多线程并发中使用，但如果向构造器或者append，insert方法中传入在线程间共享的源序列，那么调用的代码必须保证必须确保该操作在操作期间对源序列具有一致且不变的视图（？）这可以通过调用者在操作期间持有锁、使用不可变的或者非跨线程共享的源序列来实现。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2>
+        
+          <a class="article-more-a" href="/2020/04/06/%E3%80%90Java%E3%80%91String-SringBuffer-StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/#more">more >></a>
+        
       
 
       
@@ -507,6 +488,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo 个人博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
