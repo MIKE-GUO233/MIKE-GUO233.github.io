@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | MIKE的小博客</title>
+  <title>【字符集】对记事本中奇怪现象的深入挖掘 | MIKE的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="郭东骞 山东大学 MIKE">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MIKE的小博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="最近在网上看到了一个梗，说在windows系统下打开记事本写下“联通”两个字，保存关闭过后再次打开就会编程乱码，但我在Mac上用TextEdit尝试了一下，并没有成功复现。难道是微软没有恰上联通饭？这一切得从字符编码开始说起。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【字符集】对记事本中奇怪现象的深入挖掘">
+<meta property="og:url" content="http://yoursite.com/2020/04/25/%E3%80%90%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%91%E5%AF%B9%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B8%AD%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%B7%B1%E5%85%A5%E6%8C%96%E6%8E%98/index.html">
 <meta property="og:site_name" content="MIKE的小博客">
-<meta property="og:description" content="郭东骞 山东大学 MIKE">
+<meta property="og:description" content="最近在网上看到了一个梗，说在windows系统下打开记事本写下“联通”两个字，保存关闭过后再次打开就会编程乱码，但我在Mac上用TextEdit尝试了一下，并没有成功复现。难道是微软没有恰上联通饭？这一切得从字符编码开始说起。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/ASCII.png">
+<meta property="og:image" content="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/EASCII.gif">
+<meta property="og:image" content="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/GB18030.png">
+<meta property="og:image" content="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/charset.png">
+<meta property="article:published_time" content="2020-04-25T01:42:50.000Z">
+<meta property="article:modified_time" content="2020-04-25T10:47:03.940Z">
 <meta property="article:author" content="MIKE_GUO">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/ASCII.png">
   
     <link rel="alternative" href="/atom.xml" title="MIKE的小博客" type="application/atom+xml">
   
@@ -156,280 +163,258 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-【字符集】对记事本中奇怪现象的深入挖掘" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      【字符集】对记事本中奇怪现象的深入挖掘
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
 
 <a href="/2020/04/25/%E3%80%90%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%91%E5%AF%B9%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B8%AD%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%B7%B1%E5%85%A5%E6%8C%96%E6%8E%98/" class="archive-article-date">
   	<time datetime="2020-04-25T01:42:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/25/%E3%80%90%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%91%E5%AF%B9%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B8%AD%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%B7%B1%E5%85%A5%E6%8C%96%E6%8E%98/">【字符集】对记事本中奇怪现象的深入挖掘</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在网上看到了一个梗，说在windows系统下打开记事本写下“联通”两个字，保存关闭过后再次打开就会编程乱码，但我在Mac上用TextEdit尝试了一下，并没有成功复现。难道是微软没有恰上联通饭？这一切得从字符编码开始说起。</p>
+<a id="more"></a>>>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="0-引入"><a href="#0-引入" class="headerlink" title="0.引入"></a>0.引入</h2><p>计算机中，处理器使用晶体管的开合表示0和1两种状态，这使得其在对数字进行处理时只需要在二进制与十进制之间转换即可。但是对于现实中的字符来说，唯一的方法就是制定一套规则，让每个字符对应一个数字，形成一种字符与数字之间的对应关系，这样就能够使得解析文字与处理数字一样简单了。这种字符和数字之间的对应关系就称为字符编码。</p>
+<h2 id="1-ASCII"><a href="#1-ASCII" class="headerlink" title="1.ASCII"></a>1.ASCII</h2><p>1946年，世界上第一台计算机在美国诞生。它在设计时使用字节(byte)作为基本的数据存储单位。一个字节等于八个比特(1 byte = 8 bit)，可以表示一个八位的二进制数。从全是0到全是1，一共可以表示256种不同的状态(2^8  = 256)。于是在1967年，聪明的美国人就将自己本土的字符按照对应关系一一编码到了计算机当中，其中包括了数字、大小写英文字母、一些简单的特殊符号共127个字符。使用一个字节进行存放绰绰有余，这样便解决了在电脑当中显示英文的问题。这种编码方式就被称作ASCII码，即所谓美国信息交换标准代码。ASCII成为了最通用的信息交换标准。</p>
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/ASCII.png" style="zoom:50%;" />
 
+<p>但随着计算机在全世界范围的普及，越来越多语言的字符需要在计算机当中显示，于是一字节当中256个空间中剩下的也全都塞满了新的字符。这就诞生了一张ASCII扩展表，它由IBM制定，用来表示框线、音标和一些非英语语言的字母。毕竟一字节终究只能表示256个字符，但汉字就有十多万个，因此这套标准在国际上推广就显得捉襟见肘了。</p>
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/EASCII.gif" style="zoom:50%;" />
+
+<h2 id="2-GB-2312"><a href="#2-GB-2312" class="headerlink" title="2.GB 2312"></a>2.GB 2312</h2><p>在1980年，为了解决汉字在计算机中编码的问题，中国国家标准总局发布了《信息交换用汉字编码字符集》，标准号为GB 2312。这个标准迅速地在中国大陆通行，甚至新加坡也采用了。这是一个简体中文字符集，使用一到两个字节共同表示一个字符，由6763个常用汉字和682个全角非汉字字符组成，这6763个汉字又根据使用频率分为了两级。GB 2312的出现基本上满足了计算机处理汉字的需要，它所收录的汉字已经覆盖中国大陆99.75%的使用频率，但对于人名、古籍等领域出现的生僻字GB 2312无法处理，因此编码方案一再扩展。</p>
+<h2 id="3-GBK-和-GB-18030"><a href="#3-GBK-和-GB-18030" class="headerlink" title="3.GBK 和 GB 18030"></a>3.GBK 和 GB 18030</h2><p>在1995年，信息技术标准化技术委员会制定了《汉字内码扩展规范》，即GBK字符集（国标扩）。GBK包括了GB 2312的所有内容，同时增加了近两万个包括繁体字的新汉字和符号。再到后来，为了满足少数民族使用电脑的需求，又新增了几千个新的少数民族字符，这就形成了GB 18030字符集。GB 18030向下兼容GBK，GBK又向下兼容GB 2312，GB 2312再向下兼容ASCII，这样就让中文操作系统能完美地兼容中英文两种语言以及少数民族的语言。现行的国家标准是GB 18030—2005。</p>
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/GB18030.png" style="zoom:25%;" />
+
+<h2 id="4-GBK原理"><a href="#4-GBK原理" class="headerlink" title="4.GBK原理"></a>4.GBK原理</h2><p>ASCII用一个字节表示一个字符，GBK用两个字节表示一个字符。那么不免有疑问，计算机是如何分辨一个字符是单字节还是双字节呢？我们需要将二进制转化为十六进制进行研究。前面提及，ASCII指定了127个字符，使用127个八位的二进制数字表示，即0000 0000~0111 1111，转换为二进制即为00~7F。一字节256个位置当中剩余的129个空位即为80~FF。因此在计算机中就规定了当遇到一个字符的编码在81~FE（不含80和FF）时，就自动判定该字符为双字节字符，将它和它之后的一字节一同解析，否则就使用ASCII规则只解析单个字节。</p>
+<blockquote>
+<p>可以想象00~7F定义一个数轴，数轴上的点只需要一个坐标表示</p>
+<p>81~FE定义一个平面，需要两个坐标才能确定一个点</p>
+</blockquote>
+<p>但是问题依然存在，每个国家都有自己的语言，都有一套属于自己的国家标准用来编码本国语言。中国有GB 18030，日本有Shift-JIS，韩国有Euc-kr……各国有各国的标准。在全球化的大背景下国家间的交流日益频繁，这将导致的结果是，当你打开一个日本网站时，呈现在你眼前的都是一堆乱码，你不得不下载一套对应的字符集来帮助电脑正确显示这些字符。即使这样，浏览多语言混合的网站或者文件时也很难保证不会出现问题。这时，Unicode编码标准便应运而生了。</p>
+<img src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/passage6/charset.png" alt="各种各样的文字编码" style="zoom:25%;" />
+
+<h2 id="5-Unicode"><a href="#5-Unicode" class="headerlink" title="5.Unicode"></a>5.Unicode</h2><p>1990年，国际标准化组织(ISO)开始致力于研发一套全球通用的标准化字符集，这套标准在1994年发布，命名为Unicode标准。它为世界上每一种语言的文字都编配了统一且唯一的二进制编码，满足了跨语言跨平台进行文字处理的需求。</p>
+<p>Unicode标准使用一个八位的十六进制数字0000 0000~0010 FFFF来映射所有字符。这里需要注意的是，单位比特有两种状态：0和1。它能分别表示两种状态，因此表示一个二进制数只需要1比特（二进制只有0和1两个数，2^1 = 2），而表示一个十六进制数则需要4比特（十六进制有0~F十六个数，2^4 = 16），即为半个字节表示一个十六进制数。一个八位的十六进制数字则需要占用4个字节即32比特，因此它能表示的字符数目为2^32个，远超出当前所有语言文字的数目，所以这套标准中留下了庞大的空白。</p>
+<p>将这八位二进制数两两拆分为4对，每一对占用1字节。从高位到低位分别命名为第一字节到第四字节，规定第一字节的取值只能为00~7F，将字符集根据第一字节分成128个组（在这里可以将一组看做为一个立方体）。显然，我们现在使用的所有字符都在第一字节为00的这个组内。然后，将每组按照第二字节切割成256个平面，每个平面再根据第三字节划分成256格，每一格当中按照第四字节划分为256个空位，这里的空位便是存放对应字符的位置。目前全人类所需要表示的字符为24万个左右，它们有序地分布在第0，1，2，14，15，16个平面中（第二字节为00，01，02，0E，0F，10）。第15和16平面是两块私人使用区，用于存放用户自定义符号的区域，而常用的字符则保存在前三个平面中。英文字母和众多拉丁字符一起占据了第0平面中第一个格子的256个空位，中文的七万余个汉字一部分分布在第0平面，一部分分布在第2平面。</p>
+<h2 id="6-UTF-8"><a href="#6-UTF-8" class="headerlink" title="6.UTF-8"></a>6.UTF-8</h2><p>Unicode只是用来统一字符而规定的标准，而这个标准的实现方式则有很多种方式，这可以类比Unicode标准为java当中的抽象类。Unicode标准的实现方式中应用最广泛，最为我们熟知的就是UTF-8了，它是Unicode的一种储存、传输方式。UTF-8是一种可变长编码方式，长度可以由单字节到四字节。将Unicode编码转换为UTF-8是一件非常容易的事情。他们的转换方式按照下表进行：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Unicode编码（十六进制）</th>
+<th align="center">UTF-8字节流（二进制）</th>
+<th align="center">所在平面</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">000000~00007F</td>
+<td align="center">0XXXXXXX</td>
+<td align="center">第0平面</td>
+</tr>
+<tr>
+<td align="center">000080~0007FF</td>
+<td align="center">110XXXXX 10XXXXXX</td>
+<td align="center">第0平面</td>
+</tr>
+<tr>
+<td align="center">000800~00FFFF</td>
+<td align="center">1110XXXX 10XXXXXX 10XXXXXX</td>
+<td align="center">第0平面</td>
+</tr>
+<tr>
+<td align="center">010000~10FFFF</td>
+<td align="center">11110XXX 10XXXXXX 10XXXXXX 10XXXXXX</td>
+<td align="center">第1,2,14,15,16平面</td>
+</tr>
+</tbody></table>
+<p>注意，由于所有的字符都位于第一字节为00的组内，因此上表中的Unicode编码省去了第一字节的两个二进制数。转换时将Unicode编码转换为二进制数，按顺序对应填入UTF-8字节流中的X中即可。例如中国的中字，在Unicode中的编码为004E2D，符合第三行对应的规则，将004E2D转换为二进制数字即为0100 1110 0010 1101，将这串二进制数按顺序填入X中得到1110<strong>0100</strong> 10<strong>111000</strong> 10<strong>101101</strong> 把这串二进制数转换回16进制则为E4B8AD，这便是”中“的UTF-8编码。</p>
+<h2 id="7-全角和半角"><a href="#7-全角和半角" class="headerlink" title="7.全角和半角"></a>7.全角和半角</h2><p>全角字符占用两个标准字符的位置，两个字节；半角字符占用一个标准字符的位置，一个字节。在终端或者命令行中打印时，两个半角字符的宽度即为一个全角字符的宽度。全半角的区分主要是针对英文字母和标点符号的，这一点可以体现在当你切换输入法为全角英文时，会明显感觉一个英文字母变“宽”了，而在中文模式下无论怎么切换全半角都没有变化，那是因为不论全半角，汉字都要占用两个字节。</p>
+<p>全角英文字符：ａｐｐｌ</p>
+<p>全角中文字符：苹果中国</p>
+<p>半角英文字符：apples</p>
+<p>仔细纵向观察一下，一个全角英文字符的宽度和一个汉字或者两个半角英文字符的宽度是一样的。</p>
+<h2 id="8-总结"><a href="#8-总结" class="headerlink" title="8.总结"></a>8.总结</h2><p>回到文章开头的那个小bug。在Windows系统中用记事本保存文件时默认是使用ANSI编码方式的，这种方式是指使用计算机本地的编码，在简体中文系统中则默认为GBK字符集。查阅GBK字符集知，“连通”对应的十六进制编码分别为C1AA，CDA8。将他们转换为二进制编码则为<strong>110</strong>0 0001 <strong>10</strong>10 1010和<strong>110</strong>0 1101 <strong>10</strong>10 1000，这两个字符的二进制码恰好和UTF-8字节流的第二种形式吻合。于是保存文件再次打开时，记事本就会误认为这是一个UTF-8编码的文件，这两个二进制编码在UTF-8编码中啥也不是，并没有对应的字符，因此就显示出了乱码。实际上当文档中的字符对应GBK字符集中第一字节在C0到DF之间而且第二字节在BB到BF之间时，记事本都会坚持认为文本的编码格式为UTF-8。不信？你试试“钱学森力挺联通”，这句话照样是乱码的。</p>
+<h2 id="9-参考资料"><a href="#9-参考资料" class="headerlink" title="9.参考资料"></a>9.参考资料</h2><ol>
+<li>国家标准全文公开系统 <a href="http://www.gb688.cn/bzgk/gb/index" target="_blank" rel="noopener">http://www.gb688.cn/bzgk/gb/index</a></li>
+<li>bilibili <a href="https://www.bilibili.com/video/BV12741127qm" target="_blank" rel="noopener">https://www.bilibili.com/video/BV12741127qm</a></li>
+<li>CSDN <a href="https://blog.csdn.net/Dontla/article/details/103763117" target="_blank" rel="noopener">https://blog.csdn.net/Dontla/article/details/103763117</a></li>
+<li>CSDN <a href="https://blog.csdn.net/viafcccy/article/details/84626964" target="_blank" rel="noopener">https://blog.csdn.net/viafcccy/article/details/84626964</a></li>
+<li>知乎 <a href="https://www.zhihu.com/question/19605819" target="_blank" rel="noopener">https://www.zhihu.com/question/19605819</a></li>
+<li><a href="http://www.mamicode.com/info-detail-227463.html" target="_blank" rel="noopener">http://www.mamicode.com/info-detail-227463.html</a></li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/image/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://mike-1301509253.cos.ap-guangzhou.myqcloud.com/blog/image/Wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/25/%E3%80%90%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%91%E5%AF%B9%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B8%AD%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%B7%B1%E5%85%A5%E6%8C%96%E6%8E%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2020/04/06/%E3%80%90Java%E3%80%91String-SringBuffer-StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-04-06T11:55:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/06/%E3%80%90Java%E3%80%91String-SringBuffer-StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【Java】String,SringBuffer,StringBuilder的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/%E3%80%90Java%E3%80%91String-SringBuffer-StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/">【Java】String,SringBuffer,StringBuilder的区别</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/03/28/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89-%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2020-03-28T03:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/28/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89-%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C/">【hexo】搭建基于hexo框架的个人博客（四）--开始写作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo 个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/03/22/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89-%E4%B8%AA%E6%80%A7%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-03-22T01:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/22/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89-%E4%B8%AA%E6%80%A7%E5%8C%96/">【hexo】搭建基于hexo框架的个人博客（三）--个性化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo 个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/03/14/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89-%E9%83%A8%E7%BD%B2/" class="archive-article-date">
-  	<time datetime="2020-03-14T03:37:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/14/%E3%80%90hexo%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89-%E9%83%A8%E7%BD%B2/">【hexo】搭建基于hexo框架的个人博客（二）——部署</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo 个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/03/08/%E3%80%90%E9%A6%96%E5%8F%91%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-03-08T03:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/08/%E3%80%90%E9%A6%96%E5%8F%91%E3%80%91%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">【首发】搭建基于hexo框架的个人博客（一）--建站</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo 个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/03/07/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-07T12:45:30.530Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2020/04/25/%E3%80%90%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%91%E5%AF%B9%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%B8%AD%E5%A5%87%E6%80%AA%E7%8E%B0%E8%B1%A1%E7%9A%84%E6%B7%B1%E5%85%A5%E6%8C%96%E6%8E%98/",
+  owner: 'pppp20001@163.com',
+  repo: 'MIKE-GUO233.github.io',
+  oauth: {
+    client_id: '3f33e15897ca5a226bf4',
+    client_secret: '05bdcccc21e344b5e9a2c40ddf4b68d514f3a933',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -463,8 +448,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
